@@ -1,0 +1,33 @@
+{
+    "name": "ContactMessage",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Nom du contact"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Email du contact"
+      },
+      "subject": {
+        "type": "string",
+        "description": "Sujet du message"
+      },
+      "message": {
+        "type": "string",
+        "description": "Contenu du message"
+      },
+      "is_read": {
+        "type": "boolean",
+        "default": false,
+        "description": "Message lu ou non"
+      }
+    },
+    "required": [
+      "name",
+      "email",
+      "message"
+    ]
+  }

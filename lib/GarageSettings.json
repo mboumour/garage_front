@@ -1,0 +1,72 @@
+{
+    "name": "GarageSettings",
+    "type": "object",
+    "properties": {
+      "garage_name": {
+        "type": "string",
+        "description": "Nom du garage"
+      },
+      "phone": {
+        "type": "string",
+        "description": "T\u00e9l\u00e9phone principal"
+      },
+      "email": {
+        "type": "string",
+        "description": "Email de contact"
+      },
+      "address": {
+        "type": "string",
+        "description": "Adresse compl\u00e8te"
+      },
+      "city": {
+        "type": "string",
+        "description": "Ville"
+      },
+      "postal_code": {
+        "type": "string",
+        "description": "Code postal"
+      },
+      "latitude": {
+        "type": "number",
+        "description": "Latitude pour la carte"
+      },
+      "longitude": {
+        "type": "number",
+        "description": "Longitude pour la carte"
+      },
+      "opening_hours": {
+        "type": "object",
+        "description": "Horaires d'ouverture",
+        "properties": {
+          "monday": {
+            "type": "string"
+          },
+          "tuesday": {
+            "type": "string"
+          },
+          "wednesday": {
+            "type": "string"
+          },
+          "thursday": {
+            "type": "string"
+          },
+          "friday": {
+            "type": "string"
+          },
+          "saturday": {
+            "type": "string"
+          },
+          "sunday": {
+            "type": "string"
+          }
+        }
+      },
+      "about_text": {
+        "type": "string",
+        "description": "Texte de pr\u00e9sentation"
+      }
+    },
+    "required": [
+      "garage_name"
+    ]
+  }
