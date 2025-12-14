@@ -70,7 +70,7 @@ type UpdateAppointmentVars = {
     status: AppointmentStatus;
   };
 };
-};
+
 
 type MarkMessageAsReadVars = string;
 
