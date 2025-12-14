@@ -62,11 +62,14 @@ const serviceLabels: Record<string, string> = {
 };
 
 // ===== Mutation variable types =====
+type AppointmentStatus = 'pending' | 'confirmed' | 'completed' | 'cancelled';
+
 type UpdateAppointmentVars = {
   id: string;
   data: {
-    status: string;
+    status: AppointmentStatus;
   };
+};
 };
 
 type MarkMessageAsReadVars = string;
@@ -110,7 +113,10 @@ export default function Admin() {
     },
   });
 
-  const handleStatusChange = (appointmentId: string, newStatus: string) => {
+  const handleStatusChange = (
+    appointmentId: string,
+    newStatus: AppointmentStatus
+  ) => {
     updateAppointmentMutation.mutate({
       id: appointmentId,
       data: { status: newStatus },
