@@ -3,18 +3,14 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Phone, Mail, MapPin, Clock, Navigation, Calendar } from "lucide-react";
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 
-// Fix for default marker icon
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-});
+import dynamic from "next/dynamic";
+
+const LocationMap = dynamic(
+  () => import("@/components/providers/LocationMap"),
+  { ssr: false }
+);
 
 const garageLocation = {
   lat: 48.8566,
@@ -73,24 +69,13 @@ export default function Location() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2 rounded-2xl overflow-hidden shadow-xl h-[500px]"
             >
-              <MapContainer 
-                center={[garageLocation.lat, garageLocation.lng]} 
-                zoom={15} 
-                style={{ height: '100%', width: '100%' }}
-                scrollWheelZoom={false}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={[garageLocation.lat, garageLocation.lng]}>
-                  <Popup>
-                    <div className="font-semibold">GaragePro</div>
-                    <div className="text-sm">{garageLocation.address}</div>
-                    <div className="text-sm">{garageLocation.city}</div>
-                  </Popup>
-                </Marker>
-              </MapContainer>
+            <LocationMap
+              lat={garageLocation.lat}
+              lng={garageLocation.lng}
+              address={garageLocation.address}
+              city={garageLocation.city}
+            />
+
             </motion.div>
 
             {/* Info Cards */}
