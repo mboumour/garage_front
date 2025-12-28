@@ -1,8 +1,6 @@
 "use client";
 
-import React from 'react';
 import Link from "next/link";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Calendar, MessageSquare } from "lucide-react";
@@ -30,13 +28,13 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={createPageUrl("Appointment")}>
+            <Link href="/appointment">
               <Button size="lg" className="bg-slate-900 hover:bg-slate-800 text-white px-8 h-14 text-base shadow-xl">
                 <Calendar className="w-5 h-5 mr-2" />
                 Prendre rendez-vous
               </Button>
             </Link>
-            <Link href={createPageUrl("Contact")}>
+            <Link href="/contact">
               <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-amber-600 px-8 h-14 text-base">
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Nous contacter

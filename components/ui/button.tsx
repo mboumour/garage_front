@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@/utils";
+import { cn } from "@/lib/utils";
 
 const variantClasses: Record<string, string> = {
   default: "bg-slate-900 text-white hover:bg-slate-800",

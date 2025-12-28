@@ -1,8 +1,6 @@
 "use client";
 
-import React from 'react';
 import Link from "next/link";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { 
@@ -108,7 +106,7 @@ export default function ServicesPreview() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Link href={createPageUrl("Services")}>
+          <Link href="/services">
             <Button variant="outline" size="lg" className="group border-slate-300 hover:border-amber-500 hover:text-amber-600">
               Voir tous nos services
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

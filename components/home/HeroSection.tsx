@@ -1,10 +1,8 @@
 "use client";
 
-import React from 'react';
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { createPageUrl } from "@/utils";
 import { ChevronRight, Phone, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -67,7 +65,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Link href={createPageUrl("Appointment")}>
+            <Link href="/appointment">
               <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-8 h-14 text-base shadow-lg shadow-amber-500/25 transition-all hover:shadow-amber-500/40">
                 <Calendar className="w-5 h-5 mr-2" />
                 Prendre rendez-vous

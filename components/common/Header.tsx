@@ -3,17 +3,16 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, Phone, Calendar, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { name: "Accueil", page: "Home" },
-  { name: "Services", page: "Services" },
-  { name: "À propos", page: "About" },
-  { name: "Localisation", page: "Location" },
-  { name: "Contact", page: "Contact" },
+  { name: "Accueil", page: "/" },
+  { name: "Services", page: "services" },
+  { name: "À propos", page: "about" },
+  { name: "Localisation", page: "location" },
+  { name: "Contact", page: "contact" },
 ];
 
 export default function Header() {
@@ -31,8 +30,7 @@ export default function Header() {
   }, []);
 
   const isActive = (page: string) => {
-    const pagePath = createPageUrl(page);
-    return pathname === pagePath;
+    return pathname === page;
   };
 
   return (
@@ -43,7 +41,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between h-20">
-          <Link href={createPageUrl("Home")} className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-amber-500">
               <span className="text-slate-900 font-bold text-xl">G</span>
             </div>
@@ -60,7 +58,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <Link
                 key={link.page}
-                href={createPageUrl(link.page)}
+                href={link.page}
                 className={`text-sm font-medium transition-colors relative ${
                   isScrolled
                     ? isActive(link.page)
@@ -92,7 +90,7 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               01 23 45 67 89
             </a>
-            <Link href={createPageUrl("Appointment")}>
+            <Link href="/appointment">
               <Button className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
                 <Calendar className="w-4 h-4 mr-2" />
                 Rendez-vous
@@ -130,7 +128,7 @@ export default function Header() {
                 {navLinks.map((link) => (
                   <Link
                     key={link.page}
-                    href={createPageUrl(link.page)}
+                    href={link.page}
                     className={`flex items-center px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                       isActive(link.page)
                         ? "bg-amber-500/10 text-amber-400"
@@ -149,7 +147,7 @@ export default function Header() {
                 <Phone className="w-5 h-5" />
                 01 23 45 67 89
               </a>
-              <Link href={createPageUrl("Appointment")} onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/appointment" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold h-12">
                   <Calendar className="w-5 h-5 mr-2" />
                   Prendre rendez-vous
