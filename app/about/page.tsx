@@ -23,7 +23,7 @@ export default function About() {
               Notre Histoire
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              À propos de GaragePro
+              À propos de France Pneu
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Plus de 15 ans d&apos;expertise au service de votre véhicule
@@ -47,7 +47,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Fondé en 2009, GaragePro est né de la passion d&apos;un mécanicien pour l&apos;automobile 
+                  Fondé en 2009, France Pneu est né de la passion d&apos;un mécanicien pour l&apos;automobile 
                   et de sa volonté d&apos;offrir un service de qualité à des prix justes.
                 </p>
                 <p>

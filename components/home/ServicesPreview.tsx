@@ -107,7 +107,8 @@ export default function ServicesPreview() {
           className="text-center mt-12"
         >
           <Link href="/services">
-            <Button variant="outline" size="lg" className="group border-slate-300 hover:border-amber-500 hover:text-amber-600">
+            <Button variant="outline" size="lg" 
+              className="flex-1 h-14 bg-amber-500 hover:bg-amber-600 hover:text-amber-600 hover:border-amber-500 text-slate-900 font-semibold">
               Voir tous nos services
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>

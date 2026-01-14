@@ -13,20 +13,20 @@ const LocationMap = dynamic(
 );
 
 const garageLocation = {
-  lat: 48.8566,
-  lng: 2.3522,
-  address: "123 Avenue des Pneus",
-  city: "75001 Paris"
+  lat: 44.812339015683,
+  lng: -0.70123496498,
+  address: "5 impasse des hirondelles",
+  city: "33700 Merignac"
 };
 
 const openingHours = [
-  { day: "Lundi", hours: "8h00 - 19h00", isOpen: true },
-  { day: "Mardi", hours: "8h00 - 19h00", isOpen: true },
-  { day: "Mercredi", hours: "8h00 - 19h00", isOpen: true },
-  { day: "Jeudi", hours: "8h00 - 19h00", isOpen: true },
-  { day: "Vendredi", hours: "8h00 - 19h00", isOpen: true },
-  { day: "Samedi", hours: "9h00 - 17h00", isOpen: true },
-  { day: "Dimanche", hours: "Fermé", isOpen: false }
+  { day: "Lundi", hours: "9h00 - 19h00", isOpen: true },
+  { day: "Mardi", hours: "9h00 - 19h00", isOpen: true },
+  { day: "Mercredi", hours: "9h00 - 19h00", isOpen: true },
+  { day: "Jeudi", hours: "9h00 - 19h00", isOpen: true },
+  { day: "Vendredi", hours: "9h00 - 19h00", isOpen: true },
+  { day: "Samedi", hours: "9h00 - 19h00", isOpen: true },
+  { day: "Dimanche", hours: "9h00 - 19h00", isOpen: true }
 ];
 
 export default function Location() {
@@ -121,7 +121,7 @@ export default function Location() {
                 <div className="space-y-3">
                   <a href="tel:+33123456789" className="flex items-center gap-3 text-slate-700 hover:text-amber-600 transition-colors">
                     <Phone className="w-4 h-4" />
-                    01 23 45 67 89
+                    06 27 20 08 11
                   </a>
                   <a href="mailto:contact@garagepro.fr" className="flex items-center gap-3 text-slate-700 hover:text-amber-600 transition-colors">
                     <Mail className="w-4 h-4" />
@@ -137,7 +137,7 @@ export default function Location() {
                   Réservez votre créneau en ligne
                 </p>
                 <Link href="/appointment">
-                  <Button className="w-full bg-white text-amber-600 hover:bg-slate-100">
+                    <Button className="w-full bg-amber-500 hover:bg-amber-600 text-slate-900">
                     <Calendar className="w-4 h-4 mr-2" />
                     Prendre RDV
                   </Button>
@@ -165,7 +165,7 @@ export default function Location() {
               </h2>
             </div>
             <p className="text-slate-600">
-              Nous sommes ouverts 6 jours sur 7 pour vous accueillir
+              Nous sommes ouverts 7 jours sur 7 pour vous accueillir
             </p>
           </motion.div>
 

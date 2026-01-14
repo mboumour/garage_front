@@ -12,9 +12,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-xl">G</span>
+                <span className="text-slate-900 font-bold text-xl">FP</span>
               </div>
-              <span className="text-xl font-bold text-white">GaragePro</span>
+              <span className="text-xl font-bold text-white">France Pneu</span>
             </div>
             <p className="text-slate-400 leading-relaxed mb-6">
               Votre spécialiste en pneumatiques et services automobiles. 
@@ -78,12 +78,12 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
-                <span>123 Avenue des Pneus<br />75001 Paris</span>
+                <span>5 impasse des hirondelles<br />33700 Merignac</span>
               </li>
               <li>
                 <a href="tel:+33123456789" className="flex items-center gap-3 hover:text-amber-400 transition-colors">
                   <Phone className="w-5 h-5 text-amber-500 flex-shrink-0" />
-                  01 23 45 67 89
+                  06 27 20 08 11
                 </a>
               </li>
               <li>
@@ -94,7 +94,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
-                <span>Lun-Ven: 8h-19h<br />Sam: 9h-17h</span>
+                <span>Lun-Dim: 8h-19h</span>
               </li>
             </ul>
           </div>
@@ -103,7 +103,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} GaragePro. Tous droits réservés.
+            © {new Date().getFullYear()} France Pneu. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-slate-500 hover:text-amber-400 transition-colors">

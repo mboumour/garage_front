@@ -36,7 +36,7 @@ export default function LocationMap({ lat, lng, address, city }: Props) {
       />
       <Marker position={[lat, lng]}>
         <Popup>
-          <div className="font-semibold">GaragePro</div>
+          <div className="font-semibold">France Pneu</div>
           <div className="text-sm">{address}</div>
           <div className="text-sm">{city}</div>
         </Popup>

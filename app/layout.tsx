@@ -6,8 +6,8 @@ import { ReactQueryProvider } from "@/components/providers/ReactQueryProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GaragePro",
-  description: "Services de garage et pneumatiques à Paris",
+  title: "France Pneu",
+  description: "Services de garage et pneumatiques à Bordeaux",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

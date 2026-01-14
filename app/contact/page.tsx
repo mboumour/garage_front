@@ -132,9 +132,12 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Téléphone</h3>
                     <a href="tel:+33123456789" className="text-amber-600 hover:text-amber-700 text-lg font-medium">
-                      01 23 45 67 89
+                      06 27 20 08 11
                     </a>
-                    <p className="text-slate-500 text-sm mt-1">Lun-Ven: 8h-19h | Sam: 9h-17h</p>
+                      <p className="text-slate-500 text-sm mt-1">
+                        Tous les jours : 9h – 19h <br />
+                        Pause le vendredi : 12h – 14h
+                      </p>
                   </div>
                 </div>
 
@@ -158,8 +161,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Adresse</h3>
                     <p className="text-slate-700">
-                      123 Avenue des Pneus<br />
-                      75001 Paris
+                      5 impasse des hirondelles<br />
+                      33700 Merignac
                     </p>
                     <p className="text-slate-500 text-sm mt-1">Parking gratuit</p>
                   </div>
@@ -172,12 +175,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-2">Horaires d&apos;ouverture</h3>
                     <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm">
-                      <span className="text-slate-600">Lundi - Vendredi</span>
-                      <span className="text-slate-900 font-medium">8h00 - 19h00</span>
-                      <span className="text-slate-600">Samedi</span>
-                      <span className="text-slate-900 font-medium">9h00 - 17h00</span>
-                      <span className="text-slate-600">Dimanche</span>
-                      <span className="text-slate-500">Fermé</span>
+                      <span className="text-slate-600">Lundi - Dimanche</span>
+                      <span className="text-slate-900 font-medium">9h00 - 19h00</span>
                     </div>
                   </div>
                 </div>

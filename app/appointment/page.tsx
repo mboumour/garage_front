@@ -174,19 +174,21 @@ import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
 import { format, addDays, isBefore, startOfToday } from "date-fns";
 import { fr } from "date-fns/locale";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { Car, CheckCircle, Cpu, Handshake, Loader2, Move, Ruler, ShoppingCart, Truck } from "lucide-react";
 
 /* ================= TYPES ================= */
 
 const timeSlots = [
-  "08:00", "08:30", "09:00", "09:30", "10:00", "10:30",
-  "11:00", "11:30", "14:00", "14:30", "15:00", "15:30",
-  "16:00", "16:30", "17:00", "17:30", "18:00",
+  "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+  "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", 
+  "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", 
+  "18:00", "18:30",
 ];
 
-const saturdayTimeSlots = [
+const fridayTimeSlots = [
   "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-  "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
+  "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", 
+  "17:30", "18:00", "18:30",
 ];
 
 
@@ -218,16 +220,23 @@ type Service = {
 };
 
 const services: Service[] = [
-  { value: "pneus_montage", label: "Montage pneus", icon: CircleDot },
-  { value: "pneus_reparation", label: "Réparation pneus", icon: CircleDot },
+  { value: "pneus_montage_reparation", label: "Réparation pneus", icon: CircleDot },
+  { value: "geometrie", label: "Parallélisme & Géométrie", icon: Move },
   { value: "vidange", label: "Vidange", icon: Droplets },
   { value: "diagnostic", label: "Diagnostic électronique", icon: Gauge },
   { value: "freins", label: "Freins & Plaquettes", icon: Disc },
-  { value: "batterie", label: "Batterie", icon: Battery },
+  // { value: "batterie", label: "Batterie", icon: Battery },
   { value: "mecanique", label: "Mécanique générale", icon: Wrench },
   { value: "lavage", label: "Lavage complet", icon: Sparkles },
-  { value: "autre", label: "Autre service", icon: Wrench },
+  { value: "depannage", label: "Dépannage & Remorquage", icon: Truck },
+  { value: "hybride", label: "Hybride & Électronique", icon: Cpu },
+  { value: "achat_vente", label: "Achat & Vente", icon: ShoppingCart },
+
+  { value: "autre", label: "Autres services", icon: Wrench },
+
+
 ];
+
 
 /* ================= COMPONENT ================= */
 
@@ -259,7 +268,7 @@ export default function Appointment() {
 
   const disabledDays = (date: Date) => {
     const today = startOfToday();
-    return isBefore(date, today) || date.getDay() === 0;
+    return isBefore(date, today);
   };
 
   const handleSubmit = async (
@@ -298,8 +307,8 @@ export default function Appointment() {
 
   const day = formData.preferred_date.getDay();
 
-  // Samedi
-  if (day === 6) return saturdayTimeSlots;
+  // Vendredi
+  if (day === 5) return fridayTimeSlots;
 
   return timeSlots;
 };
@@ -530,8 +539,7 @@ export default function Appointment() {
                       type="button"
                       variant="outline"
                       onClick={() => setStep(1)}
-                      className="flex-1 h-14"
-                    >
+                      className="flex-1 h-14 bg-amber-500 hover:bg-amber-600 hover:text-amber-600 hover:border-amber-500 text-slate-900 font-semibold">
                       Retour
                     </Button>
                     <Button
@@ -644,7 +652,7 @@ export default function Appointment() {
                       type="button"
                       variant="outline"
                       onClick={() => setStep(2)}
-                      className="flex-1 h-14"
+                      className="flex-1 h-14 bg-amber-500 hover:bg-amber-600 hover:text-amber-600 hover:border-amber-500 text-slate-900 font-semibold"
                     >
                       Retour
                     </Button>
