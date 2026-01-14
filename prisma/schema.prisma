@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  is_read   Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Appointment {
+  id             String   @id @default(cuid())
+  client_name    String
+  email          String
+  phone          String
+  service        String
+  vehicle_info   String?
+  preferred_date DateTime
+  preferred_time String?
+  message        String?
+  status         AppointmentStatus @default(pending)
+  createdAt      DateTime @default(now())
+}
+
+model GarageSettings {
+  id            String @id @default("main")
+  garage_name   String
+  phone         String?
+  email         String?
+  address       String?
+  city          String?
+  postal_code   String?
+  latitude      Float?
+  longitude     Float?
+  opening_hours Json?
+  about_text    String?
+}
+
+enum AppointmentStatus {
+  pending
+  confirmed
+  completed
+  cancelled
+}

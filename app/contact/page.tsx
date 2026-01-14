@@ -29,26 +29,25 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    await base44.entities.ContactMessage.create(formData);  
-    
-    // Send email notification
-    await base44.integrations.Core.SendEmail({
-      to: "mouadboum2001@gmail.com", // contact@garagepro.fr
-      subject: `Nouveau message: ${formData.subject}`,
-      body: `
-        Nom: ${formData.name}
-        Email: ${formData.email}
-        Sujet: ${formData.subject}
-        
-        Message:
-        ${formData.message}
-      `
-    });
-    
-    setIsSuccess(true);
-    setIsSubmitting(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Erreur");
+
+      setIsSuccess(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      alert("Une erreur est survenue. Réessayez.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   if (isSuccess) {
     return (
