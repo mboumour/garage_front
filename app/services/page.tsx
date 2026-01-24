@@ -115,7 +115,7 @@ const serviceCategories = [
 
 export default function Services() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="bg-slate-900 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />

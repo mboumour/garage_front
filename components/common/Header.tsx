@@ -99,7 +99,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:+33123456789"
+              href="tel:+33627200811"
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                 isScrolled ? "text-slate-600 hover:text-amber-600" : "text-white/90 hover:text-white"
               }`}
@@ -130,7 +130,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
-          <div className="relative ml-auto h-full w-80 bg-slate-900/100 text-white shadow-2xl flex flex-col">
+          <div className="relative ml-auto h-full w-80 bg-slate-900/100 text-white shadow-2xl flex flex-col"></div><div className="relative ml-auto h-full w-80 bg-slate-900 text-white shadow-2xl">
             <div className="p-6 border-b border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
@@ -167,7 +167,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
             </div>
 
             <div className="p-6 border-t border-slate-800 space-y-4">
-              <a href="tel:+33123456789" className="flex items-center justify-center gap-2 text-white py-3">
+              <a href="tel:+33627200811" className="flex items-center justify-center gap-2 text-white py-3">
                 <Phone className="w-5 h-5" />
                 06 27 20 08 11
               </a>

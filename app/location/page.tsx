@@ -33,7 +33,7 @@ export default function Location() {
   const today = new Date().toLocaleDateString('fr-FR', { weekday: 'long' });
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="bg-slate-900 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />
@@ -119,7 +119,7 @@ export default function Location() {
                   <h3 className="font-semibold text-slate-900">Contact</h3>
                 </div>
                 <div className="space-y-3">
-                  <a href="tel:+33123456789" className="flex items-center gap-3 text-slate-700 hover:text-amber-600 transition-colors">
+                  <a href="tel:+33627200811" className="flex items-center gap-3 text-slate-700 hover:text-amber-600 transition-colors">
                     <Phone className="w-4 h-4" />
                     06 27 20 08 11
                   </a>

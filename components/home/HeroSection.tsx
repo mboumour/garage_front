@@ -72,7 +72,7 @@ export default function HeroSection() {
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <a href="tel:+33123456789">
+            <a href="tel:+33627200811">
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 h-14 text-base">
                 <Phone className="w-5 h-5 mr-2" />
                 Nous appeler

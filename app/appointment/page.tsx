@@ -370,7 +370,7 @@ export default function Appointment() {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="bg-slate-900 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />
@@ -597,7 +597,7 @@ export default function Appointment() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="06 12 34 56 78"
+                          placeholder="06 27 20 08 11"
                           required
                           className="h-12"
                         />

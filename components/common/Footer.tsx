@@ -81,7 +81,7 @@ export default function Footer() {
                 <span>5 impasse des hirondelles<br />33700 Merignac</span>
               </li>
               <li>
-                <a href="tel:+33123456789" className="flex items-center gap-3 hover:text-amber-400 transition-colors">
+                <a href="tel:+33627200811" className="flex items-center gap-3 hover:text-amber-400 transition-colors">
                   <Phone className="w-5 h-5 text-amber-500 flex-shrink-0" />
                   06 27 20 08 11
                 </a>

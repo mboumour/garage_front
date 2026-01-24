@@ -81,7 +81,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="bg-slate-900 py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />
@@ -131,7 +131,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 mb-1">Téléphone</h3>
-                    <a href="tel:+33123456789" className="text-amber-600 hover:text-amber-700 text-lg font-medium">
+                    <a href="tel:+33627200811" className="text-amber-600 hover:text-amber-700 text-lg font-medium">
                       06 27 20 08 11
                     </a>
                       <p className="text-slate-500 text-sm mt-1">
