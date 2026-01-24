@@ -130,7 +130,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
-          <div className="relative ml-auto h-full w-80 bg-slate-900/100 text-white shadow-2xl flex flex-col"></div><div className="relative ml-auto h-full w-80 bg-slate-900 text-white shadow-2xl">
+          <div className="relative ml-auto h-full w-80 bg-slate-900/100 text-white shadow-2xl flex flex-col"> {/* </div><div className="relative ml-auto h-full w-80 bg-slate-900 text-white shadow-2xl"> */}
             <div className="p-6 border-b border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
